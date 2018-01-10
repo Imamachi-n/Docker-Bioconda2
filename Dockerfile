@@ -7,7 +7,7 @@ LABEL base.image="Centos7"
 LABEL version="1"
 LABEL software="Centos7+Miniconda2+Bioconda base Image"
 LABEL software.version="01102018"
-LABEL tags="NGS,Genomics,Transcriptomics,Bioconda"
+LABEL tags="NGS,Genomics,Transcriptomics,Bioconda,Centos7"
 
 # Install Miniconda2 & Bioconda
 RUN yum -y update \
