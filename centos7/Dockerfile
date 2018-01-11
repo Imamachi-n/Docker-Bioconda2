@@ -17,12 +17,11 @@ RUN yum -y update \
   && rm -rf /tmp/miniconda.sh \
   && conda install -y python=2 \
   && conda update conda \
-  && conda clean --all --yes \
-  && rpm -e --nodeps bzip2 \
-  && yum -y autoremove \
-  && yum clean all \
   && conda config --add channels r \
   && conda config --add channels defaults \
   && conda config --add channels conda-forge \
   && conda config --add channels bioconda \
-  && conda upgrade conda
+  && conda clean --all --yes \
+  && rpm -e --nodeps bzip2 \
+  && yum -y autoremove \
+  && yum clean all 
