@@ -9,5 +9,6 @@ LABEL software="fastqc_0.11.6"
 LABEL software.version="01122018"
 LABEL tags="NGS,Genomics,Transcriptomics,Bioconda,debian9-slim,fastqc"
 
-# Install Miniconda2 & Bioconda
-RUN conda install fastqc=0.11.6
+# Install a software
+RUN conda install fastqc=0.11.6 \
+  && conda clean --all --yes
