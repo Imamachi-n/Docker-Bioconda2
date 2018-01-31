@@ -17,9 +17,3 @@ RUN conda install boto3 awscli \
   && conda install fastqc=0.11.6 \
   && conda install -c conda-forge openjdk \
   && conda clean --all --yes
-
-# Application entry point
-COPY ./fastqc/run_fastqc.py /run_fastqc.py
-COPY ./common_utils /common_utils
-
-ENTRYPOINT ["python", "/run_fastqc.py"]
